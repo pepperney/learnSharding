@@ -1,0 +1,35 @@
+server:
+  port: 9091
+
+spring:
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  devtools:
+    remote:
+      restart:
+        enabled: false
+  datasource:
+    test1:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/test_msg1
+      username: root
+      password: pepper
+    test2:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/test_msg2
+      username: root
+      password: pepper
+
+logging:
+  level: INFO
+
+
+
+mybatis:
+  config-locations: classpath:mybatis/mybatis-config.xml
+
+
+
